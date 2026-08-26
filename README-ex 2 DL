@@ -1,0 +1,285 @@
+# ANN Activation Functions and Optimization Algorithms
+
+
+
+Name:Anusri T
+Roll Number:24BAD010
+Course:Deep Learning
+
+
+
+To analyze the impact of different activation functions and optimization algorithms on the performance of Artificial Neural Networks (ANNs) and to learn best practices for managing deep learning experiments using Google Colab, Google Drive, and GitHub.
+
+
+
+ 2. Software Requirements
+
+* Python
+* TensorFlow
+* Google Colab
+* Google Drive
+* GitHub
+* Matplotlib
+* NumPy
+* Pandas
+
+---
+
+ 3. Objectives
+
+* Understand the role of activation functions in neural networks.
+* Visualize and compare Sigmoid, Tanh, and ReLU.
+* Evaluate the performance of different activation functions.
+* Analyze different gradient-based optimization algorithms.
+* Compare optimizer convergence and model accuracy.
+* Learn experiment management using Google Colab and Google Drive.
+* Maintain reproducible experiments using GitHub and Git.
+
+---
+
+ 4. Dataset
+
+The **MNIST handwritten digit dataset** was used for training and evaluating the ANN models.
+
+The dataset contains grayscale images of handwritten digits from **0 to 9**.
+
+The images are normalized to values between 0 and 1 and flattened before being provided to the ANN.
+
+---
+
+# Task A: Visualization of Activation Functions
+
+Three commonly used activation functions were implemented and visualized:
+
+* Sigmoid
+* Tanh
+* ReLU
+
+The functions were compared based on:
+
+* Output range
+* Saturation regions
+* Gradient behavior
+* Computational efficiency
+* Typical applications
+
+### Observations
+
+**Sigmoid:**
+Produces values between 0 and 1. It is useful for probability-based outputs but can suffer from vanishing gradients.
+
+**Tanh:**
+Produces values between -1 and 1 and is zero-centered. It generally provides better optimization behavior than sigmoid but can also suffer from saturation.
+
+**ReLU:**
+Produces zero for negative inputs and the input value for positive inputs. It is computationally efficient and commonly used in hidden layers of neural networks.
+
+### Result
+
+ReLU provides simple computation and effective gradient propagation in the positive region, making it highly suitable for hidden layers.
+
+---
+
+# Task B: Performance Comparison of Activation Functions
+
+The same ANN architecture was trained using:
+
+* Sigmoid
+* Tanh
+* ReLU
+
+The following performance measures were compared:
+
+* Training accuracy
+* Validation accuracy
+* Training loss
+* Validation loss
+* Convergence behavior
+
+### ANN Architecture
+
+```text
+Input Layer: 784 neurons
+        ↓
+Dense Layer: 128 neurons
+        ↓
+Dense Layer: 64 neurons
+        ↓
+Output Layer: 10 neurons
+```
+
+The output layer uses Softmax for multiclass classification.
+
+### Result
+
+ReLU showed faster convergence and strong training performance. In the experiment, ReLU achieved approximately **99.84% training accuracy** and **97.73% validation accuracy**, with a training loss of **0.0059** and validation loss of **0.1124**.
+
+Sigmoid showed slower convergence, while Tanh performed better than Sigmoid in terms of convergence.
+
+### Conclusion
+
+ReLU was the most effective activation function for the hidden layers in this experiment because of its fast convergence, computational efficiency, and high training accuracy.
+
+---
+
+# Task C: Comparison of Optimization Algorithms
+
+The following optimization algorithms were compared:
+
+* SGD
+* Momentum
+* RMSProp
+* Adam
+
+The comparison was performed using the same ANN architecture and ReLU activation function.
+
+The following parameters were analyzed:
+
+* Training loss
+* Validation loss
+* Training accuracy
+* Validation accuracy
+* Convergence speed
+
+### Observations
+
+**SGD:**
+Showed slower convergence and required more epochs to reach high accuracy.
+
+**Momentum:**
+Improved the convergence behavior of SGD by using information from previous updates.
+
+**RMSProp:**
+Provided faster convergence by adapting the learning rate based on gradient information.
+
+**Adam:**
+Showed fast convergence and high accuracy with low training loss.
+
+### Result
+
+Adam performed best overall in the experiment, showing fast convergence, low training loss, and high accuracy. RMSProp also provided good convergence, while Momentum performed better than basic SGD.
+
+### Conclusion
+
+Adam was the most effective optimizer for this ANN experiment because it provided fast convergence and strong generalization performance.
+
+---
+
+# Task D: Deep Learning Experiment Management
+
+The experiment was managed using **Google Colab, Google Drive, Git, and GitHub**.
+
+### Google Colab
+
+Google Colab was used to:
+
+* Write Python code
+* Train ANN models
+* Visualize activation functions
+* Compare activation functions
+* Compare optimization algorithms
+* Generate graphs and results
+
+### Google Drive
+
+Google Drive was used to store:
+
+* Colab notebooks
+* Trained models
+* Result files
+* Experiment folders
+
+The experiment folder was organized as:
+
+```text
+DL_Experiment_YOUR_ROLL_NO/
+│
+├── notebooks/
+│
+├── models/
+│
+├── results/
+│   ├── activation_results.csv
+│   └── optimizer_results.csv
+│
+└── github_repository/
+```
+
+### GitHub
+
+GitHub was used to maintain:
+
+* Python/Colab notebook
+* README documentation
+* Experiment results
+* Version history
+
+### Git Version Control
+
+Git was used to track changes in the experiment.
+
+Example commits:
+
+```text
+Initial ANN experiment
+Added activation function comparison
+Added optimizer comparison
+Updated experiment documentation
+```
+
+This helps maintain different versions of the experiment and improves reproducibility.
+
+---
+
+# 5. Results Summary
+
+| Task   | Experiment               | Result                                           |
+| ------ | ------------------------ | ------------------------------------------------ |
+| Task A | Activation visualization | Sigmoid, Tanh and ReLU compared                  |
+| Task B | Activation performance   | ReLU showed the best overall performance         |
+| Task C | Optimizer comparison     | Adam showed fast convergence and strong accuracy |
+| Task D | Experiment management    | Colab, Drive and GitHub used for reproducibility |
+
+---
+
+# 6. Overall Conclusion
+
+The experiment demonstrated the importance of choosing appropriate activation functions and optimization algorithms for Artificial Neural Networks.
+
+ReLU performed efficiently as a hidden-layer activation function and showed fast convergence with high training accuracy. Among the optimization algorithms, Adam provided fast convergence and strong overall performance.
+
+Google Colab provided the environment for implementing and running the experiments, Google Drive was used for storing models and results, and GitHub was used for documentation and version control.
+
+The experiment therefore demonstrated not only ANN model development but also the importance of **organized, reproducible, and version-controlled deep learning experiments**.
+
+---
+
+# 7. Technologies Used
+
+* **Python** – Programming language
+* **TensorFlow** – Deep learning framework
+* **Google Colab** – Cloud-based development environment
+* **Google Drive** – Experiment and model storage
+* **Matplotlib** – Data visualization
+* **NumPy** – Numerical computation
+* **Pandas** – Result analysis
+* **Git** – Version control
+* **GitHub** – Repository and collaboration
+
+---
+
+# 8. Repository Contents
+
+```text
+ANN-Activation-Optimizer-Experiment/
+│
+├── ANN_Experiment_YOUR_ROLL_NO.ipynb
+├── README.md
+│
+├── results/
+│   ├── activation_results.csv
+│   └── optimizer_results.csv
+│
+└── models/
+    └── README.md
+
